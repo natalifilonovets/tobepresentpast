@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24140f">
+  <title>Autumn Marshmallow — A2 Speaking Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,20,1;9..144,600,20,1;9..144,700,20,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <a class="wordmark" href="#home" aria-label="Autumn Marshmallow home"><span class="wordmark-icon">✦</span><span>AUTUMN<br><b>MARSHMALLOW</b></span></a>
+      <div class="header-center"><strong>A2 GRAMMAR</strong></div>
+      <div class="header-stats"><div class="score"><span>⭐</span><b id="score">0 / 15</b></div></div>
+    </header>
+
+    <section class="play-area" id="playArea" aria-label="Autumn marshmallow game">
+      <div class="scene" id="scene">
+        <div class="scene-shade"></div>
+        <div class="marshmallow-field" id="marshmallowField" aria-label="Choose a marshmallow"></div>
+        <div class="cup-target" id="cupTarget" aria-label="Hot chocolate"></div>
+        <div class="final-steam" id="finalSteam" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="task-scrim hidden" id="taskScrim">
+          <article class="task-card" id="taskCard" role="dialog" aria-modal="true" aria-labelledby="taskQuestion">
+            <h1 id="taskQuestion"></h1>
+            <div class="answer-options" id="answerOptions" role="group" aria-label="Choose the correct form"></div>
+            <p class="answer-feedback" id="answerFeedback" aria-live="polite"></p>
+            <button class="done-btn" id="doneBtn" type="button" disabled>CHECK <span>→</span></button>
+          </article>
+        </div>
+        <div class="toast" id="toast" role="status">Lovely! 🍂</div>
+        <div class="finish-overlay hidden" id="finishOverlay">
+          <div class="finish-card"><div class="finish-leaf">🍂</div><div class="card-kicker">A LITTLE AUTUMN MAGIC</div><h2>AUTUMN MUG<br><em>COMPLETE!</em></h2><p>You completed every grammar task!</p><div class="feel-title">How did you feel?</div><div class="feelings"><button>😊<span>Easy</span></button><button>🙂<span>OK</span></button><button>😅<span>Challenging</span></button></div><button id="playAgain" class="done-btn">PLAY AGAIN <span>↻</span></button></div>
+        </div>
+      </div>
+      <div class="under-scene"><div class="progress-copy"><span>MARSHMALLOWS</span><b id="progressText">0 <i>/</i> 10</b></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><p id="instructionLine"></p></div>
+    </section>
+    <footer class="game-footer"><span>ONE LITTLE STORY AT A TIME</span><span>✦</span><span>NO LOGIN · NO PRESSURE</span></footer>
+  </main>
+  <a class="channel-link" href="https://t.me/cherryladyenglish" target="_blank" rel="noopener noreferrer" aria-label="cherryladyenglish Telegram channel">cherryladyenglish <span>↗</span></a>
+  <script src="script.js"></script>
+</body>
+</html>
